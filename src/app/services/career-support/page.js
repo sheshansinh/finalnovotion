@@ -3,6 +3,7 @@
 import NovotionFooter from '@/components/Footer';
 import NovotionNavbar from '@/components/Navbar';
 import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 export const BRAND_COLORS = {
   dark: {
@@ -164,7 +165,7 @@ const CareerSupportServices = () => {
   const faqs = [
     {
       question: 'What are Career Support Services?',
-      answer: 'Think of it as having a personal marketing agent. Our service is designed to market available IT professionals (on "bench") to client companies for contract roles in the U.S. market. Instead of you waiting for projects, our team actively markets your profile, finds matching requirements, coordinates interviews, and helps you secure assignments quickly, reducing downtime.'
+      answer: 'Think of it as having a personal marketing agent. Our service is designed to market available IT professionals (on &quot;bench&quot;) to client companies for contract roles in the U.S. market. Instead of you waiting for projects, our team actively markets your profile, finds matching requirements, coordinates interviews, and helps you secure assignments quickly, reducing downtime.'
     },
     {
       question: 'Which market do you serve for this service?',
@@ -243,7 +244,7 @@ const CareerSupportServices = () => {
               Stop Waiting. <span className="text-blue-400">Start Connecting.</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
-              We are the U.S. IT market's premier career partner. We actively market your skills, connect you with top-tier projects, and manage your next career move.
+              We are the U.S. IT market&apos;s premier career partner. We actively market your skills, connect you with top-tier projects, and manage your next career move.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
@@ -266,6 +267,8 @@ const CareerSupportServices = () => {
                   <Image 
                     src="https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=2960&auto=format&fit=crop" 
                     alt="Career Challenge"
+                    width={600}
+                    height={400}
                     className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
@@ -276,18 +279,18 @@ const CareerSupportServices = () => {
             <div className={`w-full lg:w-[60%] transform transition-all duration-1000 delay-400 ${isVisible.challenge ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
               <div className="lg:pl-8">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                  THE CHALLENGE: FROM <span className="text-blue-800">"ON THE BENCH"</span> TO "IN-DEMAND"
+                  THE CHALLENGE: FROM <span className="text-blue-800">&quot;ON THE BENCH&quot;</span> TO &quot;IN-DEMAND&quot;
                 </h2>
                 
                 <div className="space-y-6 text-gray-600 text-base sm:text-lg leading-relaxed">
                   <p>
-                    For a skilled IT professional, being "on the bench" isn't a vacation. It's a period of uncertainty. 
-                    For a consulting firm, it's a drain on revenue and resources. The U.S. IT market is fast-paced, 
+                    For a skilled IT professional, being &quot;on the bench&quot; isn&apos;t a vacation. It&apos;s a period of uncertainty. 
+                    For a consulting firm, it&apos;s a drain on revenue and resources. The U.S. IT market is fast-paced, 
                     and every day not on a project is a missed opportunity.
                   </p>
                   
                   <div className="relative pl-6 border-l-4 border-blue-500 bg-blue-50/50 rounded-r-2xl p-6">
-                    <p className="font-semibold text-blue-900 mb-2">This is where Novotion's Career Support Services come in.</p>
+                    <p className="font-semibold text-blue-900 mb-2">This is where Novotion&apos;s Career Support Services come in.</p>
                     <p>
                       We are not a passive job board or a simple resume-forwarding service. We are a proactive 
                       marketing and placement partner dedicated exclusively to the U.S. IT market.
@@ -561,9 +564,9 @@ const CareerSupportServices = () => {
               Ready to Find Your Next Project?
             </h2>
             <p className="text-lg sm:text-xl text-blue-100 mb-8 leading-relaxed">
-              Whether you're an individual IT professional or a consulting firm managing a team, 
+              Whether you&apos;re an individual IT professional or a consulting firm managing a team, 
               Novotion provides the strategy, network, and support to maximize your placements and 
-              profitability. Let's connect and build a custom Career Support solution for you.
+              profitability. Let&apos;s connect and build a custom Career Support solution for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">

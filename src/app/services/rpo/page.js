@@ -3,6 +3,7 @@
 import NovotionFooter from '@/components/Footer';
 import NovotionNavbar from '@/components/Navbar';
 import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 export const BRAND_COLORS = {
   dark: {
@@ -157,11 +158,11 @@ const NovotionRPO = () => {
     },
     {
       question: 'What if we already have an in-house recruitment team?',
-      answer: 'Perfect. We offer flexible "Hybrid Models" where we can handle high-volume or specialized roles while your team focuses on executive hires, or simply supercharge your existing team\'s sourcing power.'
+      answer: 'Perfect. We offer flexible &quot;Hybrid Models&quot; where we can handle high-volume or specialized roles while your team focuses on executive hires, or simply supercharge your existing team&apos;s sourcing power.'
     },
     {
       question: 'How is RPO different from using a staffing agency?',
-      answer: 'It\'s the difference between a transactional vendor and a strategic partner. Agencies fill one job at a time for high fees. As your RPO partner, we manage your entire process for predictable, lower costs and drive your long-term talent strategy.'
+      answer: 'It&apos;s the difference between a transactional vendor and a strategic partner. Agencies fill one job at a time for high fees. As your RPO partner, we manage your entire process for predictable, lower costs and drive your long-term talent strategy.'
     }
   ];
 
@@ -199,14 +200,9 @@ const NovotionRPO = () => {
     sectionRefs.current[key] = el;
   }
 
-
-
   return (
-
-
-
     <div className="bg-white overflow-x-hidden">
-          <NovotionNavbar/>
+      <NovotionNavbar/>
 
       {/* Hero Section */}
       <section 
@@ -237,7 +233,6 @@ const NovotionRPO = () => {
                 Schedule Your RPO Consultation
               </button>
             </div>
-            
           </div>
         </div>
       </section>
@@ -253,6 +248,8 @@ const NovotionRPO = () => {
                   <Image 
                     src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop" 
                     alt="Recruitment Process"
+                    width={600}
+                    height={400}
                     className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
@@ -268,18 +265,18 @@ const NovotionRPO = () => {
                 
                 <div className="space-y-6 text-gray-600 text-base sm:text-lg leading-relaxed">
                   <p>
-                    Let's be honest: for many growing companies, traditional recruitment is a bottleneck. It's reactive, expensive, and pulls your key leaders away from their core mission. You're stuck in a cycle of paying high agency fees for one-off hires, with no long-term strategy.
+                    Let&apos;s be honest: for many growing companies, traditional recruitment is a bottleneck. It&apos;s reactive, expensive, and pulls your key leaders away from their core mission. You&apos;re stuck in a cycle of paying high agency fees for one-off hires, with no long-term strategy.
                   </p>
                   
                   <div className="relative pl-6 border-l-4 border-blue-500 bg-blue-50/50 rounded-r-2xl p-6">
                     <p className="font-semibold text-blue-900 mb-2">Recruitment Process Outsourcing (RPO) is the strategic shift that breaks this cycle.</p>
                     <p>
-                      RPO isn't just "outsourcing" your hiring. It's embedding a dedicated team of recruitment experts directly into your organization. We become a seamless extension of your Talent Acquisition team. We learn your culture, adopt your brand, and manage your entire hiring process—from sourcing and screening to offers and onboarding—with a focus on driving your long-term business goals.
+                      RPO isn&apos;t just &quot;outsourcing&quot; your hiring. It&apos;s embedding a dedicated team of recruitment experts directly into your organization. We become a seamless extension of your Talent Acquisition team. We learn your culture, adopt your brand, and manage your entire hiring process—from sourcing and screening to offers and onboarding—with a focus on driving your long-term business goals.
                     </p>
                   </div>
                   
                   <p>
-                    At Novotion, we combine on-the-ground expertise in the UK and USA with a powerful 24/7 offshore support engine in India. This "best-of-both-worlds" model delivers scalability, cost-efficiency, and a continuous pipeline of high-quality talent, all without the overhead of a large in-house team.
+                    At Novotion, we combine on-the-ground expertise in the UK and USA with a powerful 24/7 offshore support engine in India. This &quot;best-of-both-worlds&quot; model delivers scalability, cost-efficiency, and a continuous pipeline of high-quality talent, all without the overhead of a large in-house team.
                   </p>
                 </div>
               </div>
@@ -335,7 +332,7 @@ const NovotionRPO = () => {
               Our RPO Services: Your Solution, Your Way
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              A one-size-fits-all approach doesn't work. At Novotion, our RPO services are modular, allowing you to build the precise solution you need.
+              A one-size-fits-all approach doesn&apos;t work. At Novotion, our RPO services are modular, allowing you to build the precise solution you need.
             </p>
           </div>
 
@@ -360,7 +357,6 @@ const NovotionRPO = () => {
                     {service.description}
                   </p>
                   <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-800 transition-colors duration-300">
-                   
                     <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -395,7 +391,6 @@ const NovotionRPO = () => {
                           {service.description}
                         </p>
                         <div className="flex items-center justify-center text-blue-600 font-semibold group-hover:text-blue-800 transition-colors duration-300">
-                          
                           <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
@@ -434,7 +429,7 @@ const NovotionRPO = () => {
               Our Implementation: A Blueprint for Success
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              We don't just flip a switch. We build a partnership through a deliberate, transparent process.
+              We don&apos;t just flip a switch. We build a partnership through a deliberate, transparent process.
             </p>
           </div>
 
@@ -537,7 +532,7 @@ const NovotionRPO = () => {
               If your organization in the UK or USA is facing hiring delays, high agency fees, or the challenge of scaling, RPO could be the strategic shift you need.
             </p>
             <p className="text-lg sm:text-xl text-blue-100 mb-8 leading-relaxed">
-              The first step is a simple, no-obligation conversation. We want to hear about your challenges and goals. We're not here to sell you a service; we're here to see if we can provide a solution.
+              The first step is a simple, no-obligation conversation. We want to hear about your challenges and goals. We&apos;re not here to sell you a service; we&apos;re here to see if we can provide a solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
@@ -552,7 +547,7 @@ const NovotionRPO = () => {
       </section>
       <NovotionFooter/>
     </div>
-
   );
 };
+
 export default NovotionRPO;
