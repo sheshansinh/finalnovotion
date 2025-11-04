@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "build:no-lint": "next build --no-lint",
+    "build": "next build --no-lint",
+    "build:export": "next build && next export",
     "start": "next start",
     "lint": "eslint . --fix",
     "lint:check": "eslint ."

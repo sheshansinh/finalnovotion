@@ -1,5 +1,5 @@
 "use client";
-
+import Image from 'next/image';
 import { motion } from "framer-motion";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
@@ -158,7 +158,7 @@ export default function ServiceDetail() {
 
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl border border-blue-400/30">
-                <Image
+                <img
                   src={service.image || "/images/placeholder.jpg"}
                   alt={service.title}
                   className="w-full h-[400px] object-cover"
@@ -224,7 +224,7 @@ export default function ServiceDetail() {
                 onClick={() => router.push(`/services?id=${rel.id}`)}
               >
                 <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden">
-                  <Image
+                  <img
                     src={rel.image || "/images/placeholder.jpg"}
                     alt={rel.title}
                     className="w-full h-48 object-cover"

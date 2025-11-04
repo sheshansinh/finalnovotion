@@ -212,7 +212,7 @@ const CarouselSection = () => {
                         : 'shadow-lg shadow-black/30'
                     }`}>
                       {/* Image */}
-                      <Image
+                      <img
                         src={item.image}
                         alt={item.title}
                         fill

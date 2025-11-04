@@ -159,7 +159,7 @@ const ProductCard = ({ product, index }) => {
       className="group relative flex-shrink-0 w-64 md:w-80 h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl cursor-pointer border border-white/10"
     >
       {/* Background Image */}
-      <Image
+      <img
         src={product.thumbnail}
         alt={product.title}
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"

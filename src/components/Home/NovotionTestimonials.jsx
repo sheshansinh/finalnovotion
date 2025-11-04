@@ -198,7 +198,7 @@ const TestimonialSlider = () => {
                 onClick={() => activate(index)}
               >
                 {/* Background Image */}
-                <Image 
+                <img 
                   className="absolute inset-0 w-full h-full object-cover transition-all duration-500"
                   style={{
                     filter: index === current ? 'brightness(0.8) saturate(110%)' : 'brightness(0.6) saturate(80%)',
@@ -224,7 +224,7 @@ const TestimonialSlider = () => {
                   {/* Thumbnail Image - Only show when active */}
                   {index === current && (
                     <div className="flex items-center space-x-3 sm:space-x-4 mb-3 sm:mb-4">
-                      <Image 
+                      <img 
                         className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full object-cover shadow-lg border-2 border-blue-400 flex-shrink-0"
                         src={testimonial.thumbImage} 
                         alt={testimonial.name}

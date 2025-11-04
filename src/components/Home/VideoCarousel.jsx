@@ -177,7 +177,7 @@ const VideoCarousel = () => {
                                         }}
                                     >
                                         <div className="group relative w-[250px] h-[350px] md:w-[280px] md:h-[400px] rounded-[30px] overflow-hidden shadow-2xl transition-transform duration-500">
-                                            <Image
+                                            <img
                                                 src={card.image}
                                                 alt={card.title}
                                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"

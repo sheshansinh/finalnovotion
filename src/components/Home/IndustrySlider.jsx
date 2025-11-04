@@ -249,7 +249,7 @@ const IndustrySlider = () => {
                   }}
                 >
                   <div className="group relative w-[220px] md:w-[300px] h-[250px] md:h-[350px] rounded-2xl overflow-hidden shadow-2xl">
-                    <Image
+                    <img
                       src={industry.image}
                       alt={industry.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"

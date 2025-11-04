@@ -1,5 +1,5 @@
 "use client";
-
+import Image from 'next/image';
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
@@ -158,7 +158,7 @@ export default function BlogList({
               >
                 <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden h-full">
                   <div className="relative overflow-hidden">
-                    <Image
+                    <img
                       src={
                         blog.image
                           ? getImageUrl(serverBaseUrl, blog.image)
@@ -281,7 +281,7 @@ export default function BlogList({
                 >
                   <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 hover:border-blue-400/30 transition-all duration-300 overflow-hidden h-full shadow-xl hover:shadow-2xl">
                     <div className="relative overflow-hidden">
-                       <Image
+                       <img
                       src={
                         blog.image
                           ? getImageUrl(serverBaseUrl, blog.image)

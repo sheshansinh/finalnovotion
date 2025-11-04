@@ -305,7 +305,7 @@ const CarouselSection = () => {
                   </div>
 
                   {/* Background Image */}
-                  <Image
+                  <img
                     src={item.image}
                     alt={item.title}
                     className="absolute inset-0 w-full h-full object-cover object-center"

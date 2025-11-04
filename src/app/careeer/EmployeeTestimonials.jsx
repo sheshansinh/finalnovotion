@@ -281,7 +281,7 @@ const EmployeeTestimonials = () => {
 
                         {/* Employee Info */}
                         <div className="flex items-center gap-3">
-                          <Image
+                          <img
                             src={testimonial.avatar}
                             alt={testimonial.name}
                             className="w-12 h-12 rounded-full object-cover border-2 border-blue-200"

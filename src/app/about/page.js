@@ -1,3 +1,4 @@
+
 import NovotionNavbar from "@/components/Navbar";
 import NovotionAbout from "./About";
 import NovotionFooter from "@/components/Footer";

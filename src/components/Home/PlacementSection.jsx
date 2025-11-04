@@ -129,7 +129,7 @@ const PlacementSection = () => {
                     key={`${company.name}-${index}`}
                     className="flex-shrink-0 w-24 h-14 md:w-40 md:h-24 flex items-center justify-center opacity-60 transition-opacity duration-300 hover:opacity-100"
                   >
-                    <Image
+                    <img
                       src={company.url}
                       alt={company.name}
                       className="max-w-full max-h-full object-contain filter brightness-0"

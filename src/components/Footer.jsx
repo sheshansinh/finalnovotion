@@ -121,7 +121,7 @@ const NovotionFooter = () => {
             isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
           }`}>
             <Link href="/" className="inline-block group mb-6">
-              <Image
+              <img
                 src="/logo/cropped-novotion_01-e1738178048480 (1).png"
                 alt="Novotion"
                 width={180}

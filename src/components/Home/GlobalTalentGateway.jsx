@@ -99,7 +99,7 @@ const GlobalTalentGateway = () => {
             transition-all duration-1000 ease-out delay-500
           `}
         >
-          <Image
+          <img
             src="https://placehold.co/800x600/1e3a8a/ffffff?text=Global+Talent+Solutions"
             alt="Global Talent Gateway"
             className="w-full h-full object-cover absolute rounded-xl shadow-2xl saturate-150 brightness-90 hover:brightness-100 hover:saturate-100 transition-all duration-500"

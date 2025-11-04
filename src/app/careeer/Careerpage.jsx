@@ -1,5 +1,5 @@
 'use client';
-
+import Image from 'next/image';
 import React, { useState, useEffect, useRef } from 'react';
 import { Briefcase, Users, TrendingUp, Heart, DollarSign, BookOpen, Coffee, Globe, ChevronRight, MapPin, Clock, Award, Zap, Smile, Target } from 'lucide-react';
 

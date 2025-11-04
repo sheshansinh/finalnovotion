@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -75,7 +76,7 @@ export default function BlogDetail({ blog }) {
         >
           {/* The image src now uses the full URL */}
           {imageUrl && (
-            <Image
+            <img
               src={imageUrl}
               alt={blog.title}
               className="w-full h-96 object-cover"

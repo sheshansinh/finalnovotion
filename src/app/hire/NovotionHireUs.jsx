@@ -1,5 +1,5 @@
 'use client';
-
+import Image from 'next/image';
 import React, { useState, useEffect, useRef } from 'react';
 import { Code, Users, TrendingUp, Clock, DollarSign, Shield, CheckCircle, ArrowRight, Send, Phone, Mail, Calendar, Zap, Globe, Award, Target, Briefcase, ChevronRight, Star } from 'lucide-react';
 
@@ -650,7 +650,7 @@ const NovotionHireUs = () => {
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <Image src={testimonial.image} alt={testimonial.name} className="w-16 h-16 rounded-full object-cover border-4 border-blue-500" />
+                  <img src={testimonial.image} alt={testimonial.name} className="w-16 h-16 rounded-full object-cover border-4 border-blue-500" />
                   <div>
                     <h3 className="text-lg font-bold text-gray-900">{testimonial.name}</h3>
                     <p className="text-sm text-gray-500">{testimonial.role} at {testimonial.company}</p>

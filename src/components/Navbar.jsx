@@ -65,7 +65,7 @@ const NovotionNavbar = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3">
-              <Image
+              <img
                 src="/logo/cropped-novotion_01-e1738178048480 (1).png"
                 alt="Novotion"
                 width={150}

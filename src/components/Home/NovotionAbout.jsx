@@ -229,7 +229,7 @@ const NovotionAbout = () => {
                   key={index}
                   className="flex-shrink-0 w-full h-full relative"
                 >
-                  <Image
+                  <img
                     src={src}
                     alt={`Novotion team image ${index + 1}`}
                     className="w-full h-full object-cover"

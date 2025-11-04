@@ -1,5 +1,5 @@
 "use client";
-
+import Image from 'next/image';
 import React, { useState, useEffect, useRef } from "react";
 
 export const BRAND_COLORS = {

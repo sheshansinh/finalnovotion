@@ -264,7 +264,7 @@ const CareerSupportServices = () => {
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-800 rounded-full blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500 animate-pulse"></div>
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
-                  <Image 
+                  <img 
                     src="https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=2960&auto=format&fit=crop" 
                     alt="Career Challenge"
                     width={600}

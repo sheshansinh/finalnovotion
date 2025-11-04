@@ -173,7 +173,7 @@ const NovotionCta = () => {
             variants={imageVariants}
             className="flex-1 w-full lg:w-auto flex justify-center lg:justify-start"
           >
-            <Image
+            <img
               src="/image/Gemini_Generated_Image_88iugl88iugl88iu-removebg-preview.png" 
               alt="Novotion Recruitment Solutions illustration"
               className="w-full max-w-sm sm:max-w-md lg:max-w-lg"

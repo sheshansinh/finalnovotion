@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import React, { useState, useEffect, useRef } from 'react';
 
 export const BRAND_COLORS = {
@@ -226,7 +227,7 @@ const prevSlide = () => {
         <div className="relative group">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-800 rounded-full blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500 animate-pulse"></div>
           <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
-            <Image 
+            <img 
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2940&auto=format&fit=crop" 
               alt="Team collaboration"
               className="w-full h-64 sm:h-80 lg:h-96 object-cover"
@@ -534,7 +535,7 @@ const prevSlide = () => {
           <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:gap-4">
             <div className="space-y-2 sm:space-y-3 lg:space-y-4">
               <div className="group rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-xl transform hover:scale-105 transition-transform duration-500 relative">
-                <Image 
+                <img 
                   src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2940&auto=format&fit=crop" 
                   alt="Team collaboration"
                   className="w-full h-32 sm:h-40 lg:h-48 xl:h-56 object-cover"
@@ -544,7 +545,7 @@ const prevSlide = () => {
                 </div>
               </div>
               <div className="group rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-xl transform hover:scale-105 transition-transform duration-500 relative">
-                <Image 
+                <img 
                   src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2940&auto=format&fit=crop" 
                   alt="Candidate interviews"
                   className="w-full h-28 sm:h-32 lg:h-40 xl:h-48 object-cover"
@@ -556,7 +557,7 @@ const prevSlide = () => {
             </div>
             <div className="space-y-2 sm:space-y-3 lg:space-y-4 pt-6 sm:pt-8 lg:pt-12 xl:pt-16">
               <div className="group rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-xl transform hover:scale-105 transition-transform duration-500 relative">
-                <Image 
+                <img 
                   src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop" 
                   alt="Professional training"
                   className="w-full h-28 sm:h-32 lg:h-40 xl:h-48 object-cover"
@@ -566,7 +567,7 @@ const prevSlide = () => {
                 </div>
               </div>
               <div className="group rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-xl transform hover:scale-105 transition-transform duration-500 relative">
-                <Image 
+                <img 
                   src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=2940&auto=format&fit=crop" 
                   alt="Global operations"
                   className="w-full h-32 sm:h-40 lg:h-48 xl:h-56 object-cover"

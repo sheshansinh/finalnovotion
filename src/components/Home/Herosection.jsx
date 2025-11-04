@@ -144,7 +144,7 @@ const NovotionHero = () => {
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0 transition-opacity duration-700">
         {slides.map((slide, index) => (
-          <Image
+          <img
             key={index}
             src={slide.image}
             alt={`Background for slide ${index + 1}`}

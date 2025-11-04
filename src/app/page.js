@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import NovotionFooter from "@/components/Footer";
 import PerfectParallax, { StickyScroll } from "@/components/Home/3dherocarosal";
 import CarouselSection from "@/components/Home/CarouselSection";

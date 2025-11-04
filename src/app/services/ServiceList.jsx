@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import { getServices } from "@/lib/servicesApi"; // Import the API function
-
+import Image from 'next/image';
 export const BRAND_COLORS = {
   dark: {
     bg: 'bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900',
@@ -158,7 +158,7 @@ export default function ServiceList() {
                   onClick={() => router.push(`/services?id=${service.id}`)}
                 >
                   <div className="relative overflow-hidden">
-                    <Image
+                    <img
                       src={service.image || "/images/placeholder.jpg"}
                       alt={service.title}
                       className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
@@ -240,14 +240,14 @@ export default function ServiceList() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-4">
                     <div className="group rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-500 relative">
-                      <Image 
+                      <img 
                         src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2940&auto=format&fit=crop" 
                         alt="Team collaboration"
                         className="w-full h-40 object-cover"
                       />
                     </div>
                     <div className="group rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-500 relative">
-                      <Image 
+                      <img 
                         src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop" 
                         alt="Professional team"
                         className="w-full h-32 object-cover"
@@ -256,14 +256,14 @@ export default function ServiceList() {
                   </div>
                   <div className="space-y-4 pt-8">
                     <div className="group rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-500 relative">
-                      <Image 
+                      <img 
                         src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?q=80&w=2940&auto=format&fit=crop" 
                         alt="Customer support"
                         className="w-full h-32 object-cover"
                       />
                     </div>
                     <div className="group rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-500 relative">
-                      <Image 
+                      <img 
                         src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2940&auto=format&fit=crop" 
                         alt="Technical support"
                         className="w-full h-40 object-cover"
