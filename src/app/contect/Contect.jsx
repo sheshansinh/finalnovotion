@@ -20,6 +20,8 @@ export const BRAND_COLORS = {
     accent: "bg-blue-800",
   },
 };
+//
+//
 
 const NovotionContact = () => {
   const [isVisible, setIsVisible] = useState({});
@@ -108,7 +110,7 @@ const NovotionContact = () => {
       city: "Office 6695, Orlando, FL 32819",
       icon: "🇺🇸",
       mapUrl:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.536168588547!2d-81.47168!3d28.45668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI3JzI0LjEiTiA4McKwMjgnMTguMSJX!5e0!3m2!1sen!2sus!4v1234567890",
+        "https://www.google.com/maps/place/7345+W+Sand+Lake+Rd,+Orlando,+FL+32819,+USA/@28.4508988,-81.4850834,17z/data=!3m1!4b1!4m6!3m5!1s0x88e77f8cdcae4e5b:0x36b85d1a8f629306!8m2!3d28.4508988!4d-81.4825085!16s%2Fg%2F11lf3twcjq?entry=ttu&g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D",
     },
     {
       id: "india",
@@ -117,7 +119,7 @@ const NovotionContact = () => {
       city: "Ahmedabad, Gujarat",
       icon: "🇮🇳",
       mapUrl:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.9876543!2d72.51234!3d23.01234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAwJzQ0LjQiTiA3MsKwMzAnNDQuNCJF!5e0!3m2!1sen!2sin!4v1234567890",
+        "https://www.google.com/maps/place/Streebo+House/@22.9937284,72.4990351,17z/data=!3m1!4b1!4m6!3m5!1s0x395e9ac2f7b9ff45:0x6780bb57e87d072c!8m2!3d22.9937284!4d72.50161!16s%2Fg%2F1hc4r7_jm?entry=ttu&g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D",
     },
   ];
 

@@ -62,8 +62,8 @@ const NovotionFooter = () => {
         </svg>
       ),
       label: "Email",
-      value: "info@novotion.com",
-      href: "mailto:info@novotion.com"
+      value: "info@novotionservices.com",
+      href: "mailto:info@novotionservices.com"
     },
     {
       icon: (
@@ -72,8 +72,8 @@ const NovotionFooter = () => {
         </svg>
       ),
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+1 786 652 3950",
+      href: "tel:+17866523950"
     },
     
   ];
