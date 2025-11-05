@@ -7,7 +7,9 @@ import NovotionButton from "../ui/NovotionButton";
 const WhyPartnerWithNovotion = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
+  const [cardHeight, setCardHeight] = useState(112.5); // Default height
   const intervalRef = useRef(null);
+  const containerRef = useRef(null);
 
   const features = [
     {
@@ -172,9 +174,18 @@ const WhyPartnerWithNovotion = () => {
     },
   ];
 
-  const loopedFeatures = [...features, ...features];
+  // Calculate visible cards based on container height
+  const visibleCards = 4; // We want to show 4 cards at a time
+  const loopedFeatures = [...features, ...features.slice(0, visibleCards)];
 
   useEffect(() => {
+    // Calculate actual card height based on container
+    if (containerRef.current) {
+      const containerHeight = containerRef.current.offsetHeight;
+      const calculatedCardHeight = containerHeight / visibleCards;
+      setCardHeight(calculatedCardHeight);
+    }
+
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
@@ -195,10 +206,21 @@ const WhyPartnerWithNovotion = () => {
   const handleDragEnd = (event, info) => {
     setIsDragging(false);
     const offset = info.offset.y;
-    const cardHeight = 112.5;
-    const draggedCards = Math.round(offset / cardHeight);
-    const newIndex = activeIndex - draggedCards;
-    setActiveIndex(Math.max(0, Math.min(features.length - 1, newIndex)));
+    const velocity = info.velocity.y;
+    
+    // If user swiped with significant velocity
+    if (Math.abs(velocity) > 100) {
+      if (velocity > 0) {
+        setActiveIndex(prev => Math.max(0, prev - 1));
+      } else {
+        setActiveIndex(prev => Math.min(features.length - 1, prev + 1));
+      }
+    } else {
+      // If user dragged without significant velocity
+      const draggedCards = Math.round(offset / cardHeight);
+      const newIndex = activeIndex - draggedCards;
+      setActiveIndex(Math.max(0, Math.min(features.length - 1, newIndex)));
+    }
   };
 
   return (
@@ -218,67 +240,77 @@ const WhyPartnerWithNovotion = () => {
 
       <div className="container mx-auto px-4 py-12 md:py-16 lg:py-20 relative z-10">
         {/* Main Grid Container for a Two-Column Layout */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12 xl:gap-16">
           {/* Left Column: Header and CTA */}
-          <div className="w-full m-auto flex-col justify-center align-middle lg:w-1/2 text-center lg:text-left">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
+          <div className="w-full lg:w-1/2 text-center lg:text-left flex flex-col justify-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-800 to-black">
                 Why Organizations and Professionals Choose Novotion
               </span>
             </h2>
-            <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-4">
-              Building trust in the recruitment and IT staffing industry requires more than 
-              promises—it demands consistent delivery, transparent communication, and genuine 
-              investment in client success.
-            </p>
-            <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-4">
-              Since 2021, we've cultivated a reputation for reliability, professionalism, and 
-              results-driven service.
-            </p>
-            <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
-              With operational centers strategically positioned in the UK, USA, and India, we serve 
-              clients in UK and USA markets with the support of our offshore team, ensuring 24/7 
-              service capability and cost-effective delivery.
-            </p>
+            <div className="space-y-4 mb-8">
+              <p className="text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed">
+                Building trust in the recruitment and IT staffing industry requires more than 
+                promises—it demands consistent delivery, transparent communication, and genuine 
+                investment in client success.
+              </p>
+              <p className="text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed">
+                Since 2021, we've cultivated a reputation for reliability, professionalism, and 
+                results-driven service.
+              </p>
+              <p className="text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed">
+                With operational centers strategically positioned in the UK, USA, and India, we serve 
+                clients in UK and USA markets with the support of our offshore team, ensuring 24/7 
+                service capability and cost-effective delivery.
+              </p>
+            </div>
 
-        
-
-            <NovotionButton href="/contect" variant="outline" className="flex align-middle justify-center">
-              Partner With Us
-            </NovotionButton>
+            <div className="flex justify-center lg:justify-start">
+              <NovotionButton href="/contact" variant="outline">
+                Partner With Us
+              </NovotionButton>
+            </div>
           </div>
 
           {/* Right Column: Vertical Slider */}
-          <div className="w-full lg:w-1/2 relative overflow-hidden h-[450px] md:h-[550px] lg:h-[450px] rounded-3xl p-4">
+          <div 
+            ref={containerRef}
+            className="w-full lg:w-1/2 relative overflow-hidden h-[450px] md:h-[500px] lg:h-[450px] rounded-3xl p-2"
+          >
             <motion.div
               className="flex flex-col h-full cursor-grab active:cursor-grabbing"
               drag="y"
               dragConstraints={{
-                top: -(features.length * 112.5 - 450),
+                top: -(features.length * cardHeight - (containerRef.current?.offsetHeight || 450)),
                 bottom: 0,
               }}
+              dragElastic={0.1}
               onDragStart={() => setIsDragging(true)}
               onDragEnd={handleDragEnd}
-              animate={{ y: `-${activeIndex * 25}%` }}
-              transition={{ type: "tween", duration: 1, ease: "easeInOut" }}
+              animate={{ y: -activeIndex * cardHeight }}
+              transition={{ type: "spring", damping: 30, stiffness: 300 }}
             >
               {loopedFeatures.map((feature, index) => (
-                <div key={index} className="flex-shrink-0 w-full h-1/4 p-2">
-                  <div className="bg-gradient-to-br from-blue-800 via-blue-700 to-black rounded-2xl shadow-2xl overflow-hidden h-full flex items-center">
-                    <div className="p-4 md:p-6">
-                      <div className="flex items-center gap-2 md:gap-4">
+                <div 
+                  key={index} 
+                  className="flex-shrink-0 w-full p-2"
+                  style={{ height: `${cardHeight}px` }}
+                >
+                  <div className="bg-gradient-to-br from-blue-800 via-blue-700 to-black rounded-2xl shadow-2xl overflow-hidden h-full flex items-center hover:shadow-xl transition-shadow duration-300">
+                    <div className="p-4 md:p-6 w-full">
+                      <div className="flex items-start gap-3 md:gap-4">
                         {/* Icon Section */}
-                        <div className="flex-shrink-0">
+                        <div className="flex-shrink-0 mt-1">
                           <div className="w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/20">
                             <div className="text-white">{feature.icon}</div>
                           </div>
                         </div>
                         {/* Content Section */}
-                        <div className="flex-1">
-                          <h3 className="text-base md:text-lg font-bold text-white mb-1">
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-base md:text-lg font-bold text-white mb-2 line-clamp-2">
                             {feature.title}
                           </h3>
-                          <p className="text-xs md:text-sm text-blue-100 leading-relaxed">
+                          <p className="text-xs md:text-sm text-blue-100 leading-relaxed line-clamp-3">
                             {feature.description}
                           </p>
                         </div>
@@ -288,6 +320,19 @@ const WhyPartnerWithNovotion = () => {
                 </div>
               ))}
             </motion.div>
+
+            {/* Navigation Dots */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+              {features.map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === activeIndex ? 'bg-white scale-125' : 'bg-white/50'
+                  }`}
+                  onClick={() => setActiveIndex(index)}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
