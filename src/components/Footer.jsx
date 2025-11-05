@@ -75,17 +75,7 @@ const NovotionFooter = () => {
       value: "+1 (555) 123-4567",
       href: "tel:+15551234567"
     },
-    {
-      icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-      ),
-      label: "Address",
-      value: "UK | USA | India",
-      href: "#"
-    }
+    
   ];
 
   const socialLinks = [
@@ -240,7 +230,7 @@ const NovotionFooter = () => {
               <img
                 src="/logo/GIPL_Vertical Logo.png"
                 alt="Novotion"
-                className="h-4 opacity-70 hover:opacity-100 transition-opacity"
+                className="h-20 opacity-70 hover:opacity-100 transition-opacity"
               />
             </div>
           </div>
@@ -269,12 +259,15 @@ const NovotionFooter = () => {
             {/* Right: Powered By */}
             <div className="flex items-center justify-end gap-2 text-sm text-gray-500">
               <span>Powered by</span>
+              <a href="https://gohilinfotech.com/">
               <img
                 src="/logo/GIPL_Vertical Logo.png"
                 alt="Novotion"
                 className="h-20 opacity-70 hover:opacity-100 transition-opacity"
               />
+              </a>
             </div>
+            
           </div>
 
         </div>
