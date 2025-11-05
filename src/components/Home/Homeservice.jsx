@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import Link from 'next/link';
 
 const NovotionServices = () => {
   const controls = useAnimation();
@@ -159,19 +160,21 @@ const NovotionServices = () => {
                 />
               </div>
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full relative px-5 py-2.5 bg-blue-800 text-white font-semibold rounded-lg text-sm sm:text-base shadow-md overflow-hidden group"
-              >
-                <span className="relative z-10 transition-opacity duration-300 group-hover:opacity-0">
-                  Explore RPO Services
-                </span>
-                <div className="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-                <span className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Explore RPO Services →
-                </span>
-              </motion.button>
+              <Link href="/services/rpo" passHref>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full relative px-5 py-2.5 bg-blue-800 text-white font-semibold rounded-lg text-sm sm:text-base shadow-md overflow-hidden group cursor-pointer"
+                >
+                  <span className="relative z-10 transition-opacity duration-300 group-hover:opacity-0">
+                    Explore RPO Services
+                  </span>
+                  <div className="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                  <span className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Explore RPO Services →
+                  </span>
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
 
@@ -219,19 +222,21 @@ const NovotionServices = () => {
                 />
               </div>
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full relative px-5 py-2.5 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg text-sm sm:text-base shadow-md overflow-hidden group"
-              >
-                <span className="relative z-10 transition-opacity duration-300 group-hover:opacity-0">
-                  Explore Career Support Services
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-700 to-blue-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-                <span className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Explore Services →
-                </span>
-              </motion.button>
+              <Link href="/services/career-support" passHref>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full relative px-5 py-2.5 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg text-sm sm:text-base shadow-md overflow-hidden group cursor-pointer"
+                >
+                  <span className="relative z-10 transition-opacity duration-300 group-hover:opacity-0">
+                    Explore Career Support Services
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-700 to-blue-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                  <span className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Explore Services →
+                  </span>
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
         </motion.div>

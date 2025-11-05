@@ -2,19 +2,35 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import NovotionButton from "../ui/NovotionButton";
+
+// Mock button component
+const NovotionButton = ({ children, href, variant }) => (
+  <a
+    href={href}
+    className={`px-6 py-3 rounded-lg font-semibold transition-all ${
+      variant === "outline"
+        ? "border-2 border-blue-800 text-blue-800 hover:bg-blue-800 hover:text-white"
+        : "bg-blue-800 text-white hover:bg-blue-900"
+    }`}
+  >
+    {children}
+  </a>
+);
 
 const WhyPartnerWithNovotion = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
-  const [cardHeight, setCardHeight] = useState(112.5); // Default height
+  const [cardHeight, setCardHeight] = useState(112.5);
+  // New state to track number of visible cards based on screen size
+  const [visibleCards, setVisibleCards] = useState(4);
   const intervalRef = useRef(null);
   const containerRef = useRef(null);
 
   const features = [
     {
       title: "Strategic Multi-Region Operations",
-      description: "Hubs in the UK, USA, and India ensure efficient service delivery and cost-effective 24/7 support with deep knowledge of UK & USA employment laws, markets, and cultures.",
+      description:
+        "Hubs in the UK, USA, and India ensure efficient service delivery and cost-effective 24/7 support with deep knowledge of UK & USA employment laws, markets, and cultures.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +50,8 @@ const WhyPartnerWithNovotion = () => {
     },
     {
       title: "e-Verified & Compliance-Focused",
-      description: "e-Verified status ensures full legal and employment compliance while following GDPR and international data protection standards.",
+      description:
+        "e-Verified status ensures full legal and employment compliance while following GDPR and international data protection standards.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +71,8 @@ const WhyPartnerWithNovotion = () => {
     },
     {
       title: "24/7 Multilingual Support",
-      description: "Round-the-clock assistance across global time zones with India-based offshore team ensuring continuous recruitment operations and quick response for urgent roles.",
+      description:
+        "Round-the-clock assistance across global time zones with India-based offshore team ensuring continuous recruitment operations and quick response for urgent roles.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +92,8 @@ const WhyPartnerWithNovotion = () => {
     },
     {
       title: "Cost-Effective Excellence",
-      description: "Premium recruitment at competitive pricing with transparent fees and flexible engagement options. Offshore support lowers costs without compromising quality.",
+      description:
+        "Premium recruitment at competitive pricing with transparent fees and flexible engagement options. Offshore support lowers costs without compromising quality.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +113,8 @@ const WhyPartnerWithNovotion = () => {
     },
     {
       title: "Experienced Industry Specialists",
-      description: "Experts across 15+ industries with deep IT and staffing knowledge, strong grasp of technologies and contract models, skilled in both permanent and contract placements.",
+      description:
+        "Experts across 15+ industries with deep IT and staffing knowledge, strong grasp of technologies and contract models, skilled in both permanent and contract placements.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +134,8 @@ const WhyPartnerWithNovotion = () => {
     },
     {
       title: "Proven Track Record",
-      description: "500+ clients and 10,000+ successful placements with thousands of contract roles filled maintaining 85%+ retention rate.",
+      description:
+        "500+ clients and 10,000+ successful placements with thousands of contract roles filled maintaining 85%+ retention rate.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +155,8 @@ const WhyPartnerWithNovotion = () => {
     },
     {
       title: "Scalable & Flexible Solutions",
-      description: "Services tailored to both short-term needs and long-term goals with capacity to manage single hires or full offshore teams for permanent and contract staffing.",
+      description:
+        "Services tailored to both short-term needs and long-term goals with capacity to manage single hires or full offshore teams for permanent and contract staffing.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +176,8 @@ const WhyPartnerWithNovotion = () => {
     },
     {
       title: "Data Security Priority",
-      description: "Advanced security protocols and strict confidentiality with secure handling of all client and professional data and protected compliance documentation.",
+      description:
+        "Advanced security protocols and strict confidentiality with secure handling of all client and professional data and protected compliance documentation.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -174,12 +197,29 @@ const WhyPartnerWithNovotion = () => {
     },
   ];
 
-  // Calculate visible cards based on container height
-  const visibleCards = 4; // We want to show 4 cards at a time
   const loopedFeatures = [...features, ...features.slice(0, visibleCards)];
 
   useEffect(() => {
-    // Calculate actual card height based on container
+    // Function to update visible cards based on screen width
+    const updateVisibleCards = () => {
+      if (window.innerWidth < 768) {
+        // Mobile: show 2 cards
+        setVisibleCards(2);
+      } else {
+        // Tablet and Desktop: show 4 cards
+        setVisibleCards(4);
+      }
+    };
+
+    // Call on mount and window resize
+    updateVisibleCards();
+    window.addEventListener("resize", updateVisibleCards);
+
+    return () => window.removeEventListener("resize", updateVisibleCards);
+  }, []);
+
+  useEffect(() => {
+    // Calculate actual card height based on container and visible cards
     if (containerRef.current) {
       const containerHeight = containerRef.current.offsetHeight;
       const calculatedCardHeight = containerHeight / visibleCards;
@@ -201,22 +241,20 @@ const WhyPartnerWithNovotion = () => {
         clearInterval(intervalRef.current);
       }
     };
-  }, [isDragging, features.length]);
+  }, [isDragging, features.length, visibleCards]);
 
   const handleDragEnd = (event, info) => {
     setIsDragging(false);
     const offset = info.offset.y;
     const velocity = info.velocity.y;
-    
-    // If user swiped with significant velocity
+
     if (Math.abs(velocity) > 100) {
       if (velocity > 0) {
-        setActiveIndex(prev => Math.max(0, prev - 1));
+        setActiveIndex((prev) => Math.max(0, prev - 1));
       } else {
-        setActiveIndex(prev => Math.min(features.length - 1, prev + 1));
+        setActiveIndex((prev) => Math.min(features.length - 1, prev + 1));
       }
     } else {
-      // If user dragged without significant velocity
       const draggedCards = Math.round(offset / cardHeight);
       const newIndex = activeIndex - draggedCards;
       setActiveIndex(Math.max(0, Math.min(features.length - 1, newIndex)));
@@ -250,38 +288,45 @@ const WhyPartnerWithNovotion = () => {
             </h2>
             <div className="space-y-4 mb-8">
               <p className="text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed">
-                Building trust in the recruitment and IT staffing industry requires more than 
-                promises—it demands consistent delivery, transparent communication, and genuine 
-                investment in client success.
+                Building trust in the recruitment and IT staffing industry
+                requires more than promises—it demands consistent delivery,
+                transparent communication, and genuine investment in client
+                success.
               </p>
               <p className="text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed">
-                Since 2021, we've cultivated a reputation for reliability, professionalism, and 
-                results-driven service.
+                Since 2021, we've cultivated a reputation for reliability,
+                professionalism, and results-driven service.
               </p>
               <p className="text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed">
-                With operational centers strategically positioned in the UK, USA, and India, we serve 
-                clients in UK and USA markets with the support of our offshore team, ensuring 24/7 
-                service capability and cost-effective delivery.
+                With operational centers strategically positioned in the UK,
+                USA, and India, we serve clients in UK and USA markets with the
+                support of our offshore team, ensuring 24/7 service capability
+                and cost-effective delivery.
               </p>
             </div>
 
             <div className="flex justify-center lg:justify-start">
-              <NovotionButton href="/contact" variant="outline">
+              <NovotionButton href="/contect" variant="outline">
                 Partner With Us
               </NovotionButton>
             </div>
           </div>
 
           {/* Right Column: Vertical Slider */}
-          <div 
+          {/* MOBILE: h-[280px] shows 2 cards (140px each) */}
+          {/* TABLET/DESKTOP: h-[450px] shows 4 cards (112.5px each) */}
+          <div
             ref={containerRef}
-            className="w-full lg:w-1/2 relative overflow-hidden h-[450px] md:h-[500px] lg:h-[450px] rounded-3xl p-2"
+            className="w-full lg:w-1/2 relative overflow-hidden h-[280px] md:h-[450px] lg:h-[450px] rounded-3xl p-2"
           >
             <motion.div
               className="flex flex-col h-full cursor-grab active:cursor-grabbing"
               drag="y"
               dragConstraints={{
-                top: -(features.length * cardHeight - (containerRef.current?.offsetHeight || 450)),
+                top: -(
+                  features.length * cardHeight -
+                  (containerRef.current?.offsetHeight || 280)
+                ),
                 bottom: 0,
               }}
               dragElastic={0.1}
@@ -291,8 +336,8 @@ const WhyPartnerWithNovotion = () => {
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
             >
               {loopedFeatures.map((feature, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="flex-shrink-0 w-full p-2"
                   style={{ height: `${cardHeight}px` }}
                 >
@@ -320,19 +365,21 @@ const WhyPartnerWithNovotion = () => {
                 </div>
               ))}
             </motion.div>
+          </div>
 
-            {/* Navigation Dots */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-              {features.map((_, index) => (
-                <button
-                  key={index}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === activeIndex ? 'bg-white scale-125' : 'bg-white/50'
-                  }`}
-                  onClick={() => setActiveIndex(index)}
-                />
-              ))}
-            </div>
+          {/* Navigation Dots */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            {features.map((_, index) => (
+              <button
+                key={index}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === activeIndex
+                    ? "bg-blue-500 scale-125"
+                    : "bg-black/50"
+                }`}
+                onClick={() => setActiveIndex(index)}
+              />
+            ))}
           </div>
         </div>
       </div>

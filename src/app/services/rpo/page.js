@@ -4,6 +4,7 @@ import NovotionFooter from '@/components/Footer';
 import NovotionNavbar from '@/components/Navbar';
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import NovotionButton from '@/components/ui/NovotionButton';
 
 export const BRAND_COLORS = {
   dark: {
@@ -228,11 +229,7 @@ const NovotionRPO = () => {
             <p className="text-lg sm:text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
               Strategic RPO for the UK & USA. We build the high-performance teams you need, while you focus on building your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                Schedule Your RPO Consultation
-              </button>
-            </div>
+  
           </div>
         </div>
       </section>
@@ -535,12 +532,9 @@ const NovotionRPO = () => {
               The first step is a simple, no-obligation conversation. We want to hear about your challenges and goals. We&apos;re not here to sell you a service; we&apos;re here to see if we can provide a solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                Schedule Your Free RPO Consultation
-              </button>
-              <button className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-2xl font-semibold border border-white/20 backdrop-blur-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                Request RPO Information Package
-              </button>
+              <NovotionButton href="/contect" variant="primary">
+              Get Started Today
+            </NovotionButton>
             </div>
           </div>
         </div>

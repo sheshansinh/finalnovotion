@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import NovotionButton from '../ui/NovotionButton';
 
 const NovotionCta = () => {
   const textControls = useAnimation();
@@ -10,12 +11,12 @@ const NovotionCta = () => {
 
   const [textRef, textInView] = useInView({
     triggerOnce: true,
-    threshold: 0.2,
+    threshold: 0.1, // Lower threshold for mobile
   });
 
   const [imageRef, imageInView] = useInView({
     triggerOnce: true,
-    threshold: 0.3,
+    threshold: 0.1, // Lower threshold for mobile
   });
 
   React.useEffect(() => {
@@ -31,35 +32,35 @@ const NovotionCta = () => {
   }, [imageControls, imageInView]);
 
   const textVariants = {
-    hidden: { opacity: 0, x: 50 },
+    hidden: { opacity: 0, y: 30 }, // Changed from x to y for mobile
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
         type: "spring",
         stiffness: 80,
         damping: 15,
-        staggerChildren: 0.15,
+        staggerChildren: 0.1, // Faster stagger for mobile
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 15 }, // Smaller movement for mobile
     visible: { 
       opacity: 1, 
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.4,
       }
     },
   };
 
   const imageVariants = {
-    hidden: { opacity: 0, x: -50, scale: 0.9 },
+    hidden: { opacity: 0, y: 30, scale: 0.95 }, // Changed from x to y for mobile
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       scale: 1,
       transition: {
         type: "spring",
@@ -70,49 +71,66 @@ const NovotionCta = () => {
   };
 
   return (
-    <div className="w-full bg-white text-gray-900 overflow-hidden relative py-6 md:py-4 lg:py-8">
-      {/* Background patterns */}
+    <div className="w-full bg-white text-gray-900 overflow-hidden relative py-8 md:py-12 lg:py-16">
+      {/* Background patterns - optimized for mobile */}
       <div className="absolute inset-0 z-0 opacity-5">
         <div 
-          className="absolute top-1/4 left-1/4 w-80 h-80 bg-blue-500 rounded-full filter blur-3xl animate-pulse"
+          className="absolute top-10 left-5 w-40 h-40 md:w-80 md:h-80 bg-blue-500 rounded-full filter blur-3xl animate-pulse"
           style={{ animationDelay: "0.5s" }}
         ></div>
         <div 
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyan-400 rounded-full filter blur-3xl animate-pulse"
+          className="absolute bottom-10 right-5 w-40 h-40 md:w-80 md:h-80 bg-cyan-400 rounded-full filter blur-3xl animate-pulse"
           style={{ animationDelay: "1.5s" }}
         ></div>
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10 w-7xl ">
-        <div className="flex flex-col lg:flex-row-reverse items-center space-y-8 lg:space-y-0 lg:space-x-12 lg:space-x-reverse">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10 max-w-7xl">
+        {/* Mobile-first: Image first, then content */}
+        <div className="flex flex-col items-center space-y-6 md:space-y-8 lg:flex-row-reverse lg:space-y-0 lg:space-x-12 lg:space-x-reverse">
 
-          {/* Right Column: Text Content and Buttons */}
+          {/* Image Section - Appears first on mobile */}
+          <motion.div
+            ref={imageRef}
+            initial="hidden"
+            animate={imageControls}
+            variants={imageVariants}
+            className="w-full flex justify-center lg:flex-1 lg:justify-start order-1 lg:order-2"
+          >
+            <img
+              src="/image/Gemini_Generated_Image_88iugl88iugl88iu-removebg-preview.png" 
+              alt="Novotion Recruitment Solutions"
+              className="w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg"
+            />
+          </motion.div>
+
+          {/* Text Content - Appears second on mobile */}
           <motion.div
             ref={textRef}
             initial="hidden"
             animate={textControls}
             variants={textVariants}
-            className="flex-1 max-w-2xl text-center lg:text-left"
+            className="w-full text-center lg:text-left lg:flex-1 order-2 lg:order-1"
           >
-            {/* UPDATED HEADLINE */}
+            {/* Headline - Mobile optimized sizing */}
             <motion.h2 
               variants={itemVariants}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-3 md:mb-4 text-gray-900"
+              className="text-xl leading-tight sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-3 md:mb-4"
             >
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-800 to-black">
                 Ready to Transform Your Recruitment Strategy or Advance Your IT Career?
               </span>
             </motion.h2>
 
+            {/* Decorative line */}
             <motion.div 
               variants={itemVariants}
-              className="h-1 w-16 md:w-20 bg-gradient-to-r from-blue-800 to-black rounded-full mx-auto lg:mx-0 mb-4 md:mb-6"
+              className="h-1 w-12 md:w-16 lg:w-20 bg-gradient-to-r from-blue-800 to-black rounded-full mx-auto lg:mx-0 mb-3 md:mb-4 lg:mb-6"
             ></motion.div>
 
-            {/* UPDATED GOAL-FOCUSED PARAGRAPH */}
+            {/* First paragraph - Mobile optimized text */}
             <motion.p 
               variants={itemVariants}
-              className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-6 md:mb-8"
+              className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-3 md:mb-4 lg:mb-6"
             >
               Whether you represent an organization in the UK or USA seeking to optimize hiring 
               operations, scale recruitment capacity, or access specialized talent pools—or you're 
@@ -120,9 +138,10 @@ const NovotionCta = () => {
               project placements, or looking for expert support in marketing your technical skills.
             </motion.p>
 
+            {/* Second paragraph */}
             <motion.p 
               variants={itemVariants}
-              className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-6 md:mb-8"
+              className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-4 md:mb-6 lg:mb-8"
             >
               Novotion is positioned to support your objectives with proven methodologies, 
               dedicated expertise, and genuine commitment to your success. Our teams across 
@@ -130,54 +149,17 @@ const NovotionCta = () => {
               challenges, and goals.
             </motion.p>
 
-            {/* UPDATED DUAL CTA BUTTONS */}
+            {/* CTA Buttons - Mobile first stacking */}
             <motion.div 
               variants={itemVariants}
-              className="flex flex-col sm:flex-row justify-center lg:justify-start items-center space-y-3 sm:space-y-0 sm:space-x-4 md:space-x-6"
+              className="flex flex-col space-y-3 sm:space-y-4 md:flex-row md:space-y-0 md:space-x-4 lg:space-x-6 justify-center lg:justify-start"
             >
-              {/* For Organizations Button */}
-              <a 
-                href="/contact?service=rpo"
-                className="w-full sm:w-auto group relative px-6 md:px-8 py-3 md:py-4 bg-blue-800 text-white font-semibold rounded-lg text-base md:text-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 text-center"
-              >
-                <span className="relative z-10 transition-opacity duration-500 group-hover:opacity-0">
-                  For Organizations: Discuss RPO Solutions
-                </span>
-                <div className="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                <span className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  Discuss RPO Solutions →
-                </span>
-              </a>
-
-              {/* For IT Professionals Button */}
-              <a 
-                href="/contact?service=career-support"
-                className="w-full sm:w-auto group relative px-6 md:px-8 py-3 md:py-4 bg-transparent border-2 border-blue-800 text-blue-800 font-semibold rounded-lg text-base md:text-lg overflow-hidden transform transition-all duration-300 hover:scale-105 text-center"
-              >
-                <div className="absolute inset-0 bg-blue-800 transform scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></div>
-                <span className="relative z-10 transition-colors duration-300">
-                  For IT Professionals: Explore Career Support Services
-                </span>
-                <span className="absolute inset-0 z-10 flex items-center justify-center text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                  Explore Career Support →
-                </span>
-              </a>
+              
+              {/* For IT Professionals Button - Full width on mobile */}
+              <NovotionButton href="/contect" variant="outline">
+              Partner With Us
+            </NovotionButton>
             </motion.div>
-          </motion.div>
-
-          {/* Left Column: Illustration */}
-          <motion.div
-            ref={imageRef}
-            initial="hidden"
-            animate={imageControls}
-            variants={imageVariants}
-            className="flex-1 w-full lg:w-auto flex justify-center lg:justify-start"
-          >
-            <img
-              src="/image/Gemini_Generated_Image_88iugl88iugl88iu-removebg-preview.png" 
-              alt="Novotion Recruitment Solutions illustration"
-              className="w-full max-w-sm sm:max-w-md lg:max-w-lg"
-            />
           </motion.div>
 
         </div>

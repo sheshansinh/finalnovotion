@@ -4,6 +4,7 @@ import NovotionFooter from '@/components/Footer';
 import NovotionNavbar from '@/components/Navbar';
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import NovotionButton from '@/components/ui/NovotionButton';
 
 export const BRAND_COLORS = {
   dark: {
@@ -245,13 +246,7 @@ const CareerSupportServices = () => {
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
               We are the U.S. IT market&apos;s premier career partner. We actively market your skills, connect you with top-tier projects, and manage your next career move.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                Schedule Your Consultation
-              </button>
-            </div>
-           
+            </p>    
           </div>
         </div>
       </section>
@@ -565,12 +560,9 @@ const CareerSupportServices = () => {
               profitability. Let&apos;s connect and build a custom Career Support solution for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                Schedule Your Free Consultation
-              </button>
-              <button className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-2xl font-semibold border border-white/20 backdrop-blur-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                Request Service Brochure
-              </button>
+              <NovotionButton href="/contect" variant="primary">
+              Get Started Today
+            </NovotionButton>
             </div>
           </div>
         </div>

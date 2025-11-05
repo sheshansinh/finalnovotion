@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import React, { useState, useEffect, useRef } from 'react';
 import { Briefcase, Users, TrendingUp, Heart, DollarSign, BookOpen, Coffee, Globe, ChevronRight, MapPin, Clock, Award, Zap, Smile, Target } from 'lucide-react';
+import NovotionButton from '@/components/ui/NovotionButton';
 
 const BRAND_COLORS = {
   dark: {
@@ -299,14 +300,7 @@ const NovotionCareers = () => {
             </h1>
             <p className="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto mb-8">
               Where talent meets opportunity. Join 500+ global professionals shaping the future of business process outsourcing across UK, USA, and India markets.
-            </p>
-            <button 
-              onClick={scrollToContact}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center gap-2"
-            >
-              Explore Opportunities
-              <ChevronRight className="w-5 h-5" />
-            </button>
+            </p> 
           </div>
         </div>
       </section>
@@ -511,25 +505,11 @@ const NovotionCareers = () => {
               Even if you don't see a specific role that matches your skills, we'd love to hear from you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a 
-                href="mailto:careers@novotion.com" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-lg inline-flex items-center gap-3"
-              >
-                <Briefcase className="w-5 h-5" />
-                Send Your Resume
-              </a>
-              <a 
-                href="tel:+11234567890" 
-                className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-2xl font-semibold border border-white/20 backdrop-blur-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-lg inline-flex items-center gap-3"
-              >
-                <Users className="w-5 h-5" />
-                Contact HR Team
-              </a>
+              <NovotionButton href="/contect" variant="primary">
+              Get Started Today
+            </NovotionButton>
             </div>
-            <div className="mt-8 text-blue-200 text-sm">
-              <p>📧 careers@novotion.com | 📞 +1 (123) 456-7890</p>
-              <p className="mt-2">We typically respond within 24 hours</p>
-            </div>
+            
           </div>
         </div>
       </section>

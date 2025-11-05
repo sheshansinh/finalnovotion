@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import NovotionButton from '@/components/ui/NovotionButton';
 
 export const BRAND_COLORS = {
   dark: {
@@ -364,12 +365,9 @@ export default function BlogList({
               professional journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                Browse All Articles
-              </button>
-              <button className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-2xl font-semibold border border-white/20 backdrop-blur-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                Get Career Advice
-              </button>
+              <NovotionButton href="/contect" variant="primary">
+              Get Started Today
+            </NovotionButton>
             </div>
           </div>
         </div>

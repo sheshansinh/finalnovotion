@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState } from 'react';
-import NovotionButton from '../ui/NovotionButton';
+import { useEffect, useRef, useState } from "react";
+import NovotionButton from "../ui/NovotionButton";
 // import Image from 'next/image'; // Removing Next.js Image component as it's not runnable here
 
 const GlobalTalentGateway = () => {
@@ -41,27 +41,35 @@ const GlobalTalentGateway = () => {
       {/* Animated Background Graphics - subtle dots/lines */}
       {/* NOTE: If you need the gradient-shift animation, ensure the @keyframes are in your global CSS */}
       <div className="absolute inset-0 z-0 opacity-30">
-        <div className="animate-gradient-shift w-full h-full" style={{
-          background: 'linear-gradient(45deg, #1e3a8a, #0c4a6e, #1e3a8a, #0ea5e9)',
-          backgroundSize: '400% 400%',
-          animation: 'gradient-shift 15s ease infinite'
-        }}></div>
+        <div
+          className="animate-gradient-shift w-full h-full"
+          style={{
+            background:
+              "linear-gradient(45deg, #1e3a8a, #0c4a6e, #1e3a8a, #0ea5e9)",
+            backgroundSize: "400% 400%",
+            animation: "gradient-shift 15s ease infinite",
+          }}
+        ></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
         {/* Left Column: Content */}
         <div className="relative z-20 md:pr-8 lg:pr-16 text-center md:text-left">
-          
           {/* Main Title - UPDATED HEADLINE */}
           <h2
             className={`
               text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight text-white
               transition-all duration-1000 ease-out
-              ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
+              ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              }
             `}
           >
-            Your Gateway to Access <br className="hidden sm:inline" />
-            <span className="text-blue-400">Global Talent and Expertise</span>
+            Empowering Businesses Across
+            <br className="hidden sm:inline" />
+            <span className="text-blue-400">UK & USA Markets</span>
           </h2>
 
           {/* Goal-Focused Paragraph - REPLACED OLD PARAGRAPHS WITH NEW CONTENT */}
@@ -69,19 +77,27 @@ const GlobalTalentGateway = () => {
             className={`
               text-sm md:text-lg text-blue-100 mb-8 md:mb-10 leading-relaxed
               transition-all duration-1000 ease-out delay-200
-              ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
+              ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              }
             `}
           >
-            Whether you're scaling your team, launching a new initiative, or optimizing operations, **Novotion** connects you with vetted, skilled professionals and delivers customized BPO solutions that drive results. We're committed to building long-term partnerships based on trust, transparency, and measurable success. Let's grow together.
+            Whether you're scaling your hiring operations, expanding into new
+            markets, or optimizing talent acquisition, Novotion connects you
+            with specialized recruitment expertise and delivers customized RPO
+            solutions that drive measurable results. We're committed to building
+            long-term partnerships based on trust, transparency, and recruitment
+            success. Let's transform your hiring together.{" "}
           </p>
-          
+
           {/* Removed the separate "Goal Statement" paragraph as the new content is comprehensive */}
 
           {/* Call to Action Button - Text is already "Request Services" */}
           <NovotionButton href="/contect" variant="primary">
-              Partner With Us
-            </NovotionButton>
-
+            Partner With Us
+          </NovotionButton>
         </div>
 
         {/* Right Column: Image - Using standard img tag with placeholder */}
@@ -89,7 +105,11 @@ const GlobalTalentGateway = () => {
           className={`
             relative flex justify-center items-center h-72 md:h-full min-h-[300px] md:min-h-[400px] lg:min-h-[500px]
             md:transform md:translate-x-8 lg:translate-x-16 md:z-10 md:mt-0
-            ${isVisible ? 'opacity-100 scale-100 rotate-0' : 'opacity-0 scale-90 rotate-3'}
+            ${
+              isVisible
+                ? "opacity-100 scale-100 rotate-0"
+                : "opacity-0 scale-90 rotate-3"
+            }
             transition-all duration-1000 ease-out delay-500
           `}
         >
