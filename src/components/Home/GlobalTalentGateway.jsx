@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import NovotionButton from '../ui/NovotionButton';
 // import Image from 'next/image'; // Removing Next.js Image component as it's not runnable here
 
 const GlobalTalentGateway = () => {
@@ -77,17 +78,10 @@ const GlobalTalentGateway = () => {
           {/* Removed the separate "Goal Statement" paragraph as the new content is comprehensive */}
 
           {/* Call to Action Button - Text is already "Request Services" */}
-          <button
-            className={`
-              bg-blue-400 text-white px-8 py-3 md:px-10 md:py-4 rounded-full text-lg md:text-xl font-bold
-              transition-all duration-500 ease-in-out hover:bg-blue-300 hover:scale-105 shadow-lg
-              focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-50
-              ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
-            `}
-            style={{ transitionDelay: '600ms' }}
-          >
-            Request Services
-          </button>
+          <NovotionButton href="/contect" variant="primary">
+              Partner With Us
+            </NovotionButton>
+
         </div>
 
         {/* Right Column: Image - Using standard img tag with placeholder */}

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import NovotionButton from "../ui/NovotionButton";
 
 const WhyPartnerWithNovotion = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -242,25 +243,9 @@ const WhyPartnerWithNovotion = () => {
 
         
 
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-700 to-blue-900 text-white font-semibold rounded-xl shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 overflow-hidden transition-all duration-300 transform hover:scale-105 active:scale-95">
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <span className="relative z-10 flex items-center justify-center gap-3 text-base md:text-lg">
-                Partner With Us Today
-                <svg
-                  className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </span>
-            </button>
+            <NovotionButton href="/contect" variant="outline" className="flex align-middle justify-center">
+              Partner With Us
+            </NovotionButton>
           </div>
 
           {/* Right Column: Vertical Slider */}

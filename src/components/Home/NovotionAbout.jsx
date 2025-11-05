@@ -160,7 +160,7 @@ const NovotionAbout = () => {
             className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 mt-6"
           >
             <a
-              href="/about-us"
+              href="/about"
               className="group relative px-6 py-3 bg-blue-800 text-white font-semibold rounded-lg text-sm sm:text-base md:text-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105"
             >
               <span className="relative z-10 transition-opacity duration-300 group-hover:opacity-0">
@@ -173,7 +173,7 @@ const NovotionAbout = () => {
             </a>
 
             <a
-              href="/services"
+              href="/services/rpo"
               className="group relative px-6 py-3 border border-blue-800 text-blue-800 font-semibold rounded-lg text-sm sm:text-base md:text-lg overflow-hidden transform transition-all duration-300 hover:scale-105"
             >
               {/* Background transition */}
@@ -181,12 +181,12 @@ const NovotionAbout = () => {
 
               {/* Default text */}
               <span className="relative z-10 block transition-opacity duration-300 group-hover:opacity-0">
-                Explore Services
+                Explore RPO Services
               </span>
 
               {/* Hover text */}
               <span className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                Explore Services →
+                Explore RPO Services →
               </span>
             </a>
           </motion.div>
