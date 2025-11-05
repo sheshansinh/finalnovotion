@@ -115,8 +115,8 @@ const NovotionContact = () => {
     {
       id: "india",
       name: "India Office",
-      address: "1410, Shapath V, Prahladnagar",
-      city: "Ahmedabad, Gujarat",
+      address: "FOURTH FLOOR,STREEBO HOUSE,NR DAV SCHOOL,OFF S.G. HIGHWAY,DAV International School,MAKARBA",
+      city: "Ahmedabad, Gujarat 380051",
       icon: "🇮🇳",
       mapUrl:
         "https://www.google.com/maps/place/Streebo+House/@22.9937284,72.4990351,17z/data=!3m1!4b1!4m6!3m5!1s0x395e9ac2f7b9ff45:0x6780bb57e87d072c!8m2!3d22.9937284!4d72.50161!16s%2Fg%2F1hc4r7_jm?entry=ttu&g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D",
@@ -522,7 +522,7 @@ const NovotionContact = () => {
               Our Global <span className="text-blue-400">Offices</span>
             </h2>
             <p className="text-blue-100 text-sm max-w-2xl mx-auto">
-              Visit us at any of our locations worldwide
+              Visit us at any of our locations.
             </p>
           </div>
 
