@@ -162,7 +162,7 @@ const NovotionNavbar = () => {
           {/* ✅ Desktop CTA */}
           <div className="hidden lg:block">
             <NovotionButton href="/contect" variant="primary">
-              Get Started
+              Contact Us
             </NovotionButton>
           </div>
 
@@ -280,7 +280,7 @@ const NovotionNavbar = () => {
             {/* ✅ Mobile CTA */}
             <div className="pt-6">
               <NovotionButton href="/contect" variant="primary">
-                Get Started
+                Contact Us
               </NovotionButton>
             </div>
           </div>
