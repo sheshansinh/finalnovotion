@@ -1,3 +1,4 @@
+// src\app\terms\page.js
 "use client";
 
 import React, { useEffect } from "react";
@@ -67,36 +68,39 @@ const TermsAndConditionsPage = () => {
           {/* SECTION 1 */}
           <section>
             <h2 className="text-xl font-semibold text-blue-400 mb-3">1. Services</h2>
-            <ul className="list-disc list-inside space-y-2">
-              <li>
-                Novotion provides job-focused training, career attainment programs, and bonus content
-                (guides, templates, etc.) depending on the chosen plan.
-              </li>
-              <li>The method of service delivery is determined solely by Novotion.</li>
-            </ul>
-          </section>
-
-          {/* SECTION 2 */}
-          <section>
-            <h2 className="text-xl font-semibold text-blue-400 mb-3">2. Payments & Fees</h2>
             <p className="mb-3">
-              Novotion offers multiple plans with defined Enrollment and Placement Fees. Placement fees are
-              calculated on the Client’s gross annual salary (before taxes and deductions).
+              Novotion provides specialized, results-driven career development and job
+              attainment programs. Depending on the selected plan, services may
+              include one-on-one consultations, curated interview opportunities,
+              personalized coaching, skill-building workshops, resume and LinkedIn
+              optimization, recruiter engagement, AI-driven marketing, and access to
+              premium career resources.
+            </p>
+            <p className="mb-3">
+              Service delivery methods are determined solely by Novotion.
+            </p>
+            <p className="mb-3">
+              In recognition of Novotion's continued career support and post-placement
+              assistance, clients agree to a <strong>Career Success Contribution</strong> that
+              reflects the value of services rendered throughout and after successful
+              hiring outcomes.
             </p>
 
             <div className="space-y-6">
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400">Basic Plan</h3>
                 <ul className="list-disc list-inside space-y-2">
-                  <li>Enrollment Fee: $2,500 (due at enrollment)</li>
-                  <li>Placement Fee: 15% of gross salary</li>
-                  <li>30% of the placement fee due upon offer letter</li>
-                  <li>70% of the placement fee due post-placement (one-time)</li>
-                  <li>Flexible Payment: 4 easy installments</li>
+                  <li><strong>Enrollment Fee:</strong> $2,500 (due at enrollment)</li>
+                  <li><strong>Flexible Payment:</strong> 4 easy installments</li>
                   <li>
-                    Includes: One-on-One Consultation, 10 curated interview opportunities, 2 complimentary
-                    proxy interviews, resume optimization, LinkedIn review, weekly job market insights,
-                    recruiter engagement, AI-driven profile marketing, and access to career resources.
+                    <strong>Includes:</strong> One-on-one consultation, 10 curated interview
+                    opportunities, 2 complimentary proxy interviews, resume optimization,
+                    LinkedIn review, weekly job market insights, recruiter engagement,
+                    AI-driven profile marketing, and access to career resources.
+                  </li>
+                  <li>
+                    <strong>Career Success Contribution:</strong> Applies upon attainment of a verified
+                    job offer and completion of post-placement support services.
                   </li>
                 </ul>
               </div>
@@ -104,13 +108,16 @@ const TermsAndConditionsPage = () => {
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400">Standard Plan</h3>
                 <ul className="list-disc list-inside space-y-2">
-                  <li>Enrollment Fee: $3,500 (due at enrollment)</li>
-                  <li>Placement Fee: 12% of gross salary</li>
-                  <li>30% due upon offer letter, 70% post-placement</li>
-                  <li>Flexible Payment: 4 easy installments</li>
+                  <li><strong>Enrollment Fee:</strong> $3,500 (due at enrollment)</li>
+                  <li><strong>Flexible Payment:</strong> 4 easy installments</li>
                   <li>
-                    Includes: 15 interview opportunities, 2 proxy interviews, personalized resume rebuild,
-                    mock interviews, recruiter network access, priority submissions, and AI profile marketing.
+                    <strong>Includes:</strong> 15 interview opportunities, 2 proxy interviews,
+                    personalized resume rebuild, mock interviews, recruiter network
+                    access, priority submissions, and AI profile marketing.
+                  </li>
+                  <li>
+                    <strong>Career Success Contribution:</strong> Linked to successful job outcomes and
+                    activation of premium support services.
                   </li>
                 </ul>
               </div>
@@ -118,12 +125,16 @@ const TermsAndConditionsPage = () => {
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400">Advanced Plan</h3>
                 <ul className="list-disc list-inside space-y-2">
-                  <li>Enrollment Fee: $4,000 (due at enrollment)</li>
-                  <li>Placement Fee: 12% of gross salary</li>
-                  <li>Flexible Payment: 4 easy installments</li>
+                  <li><strong>Enrollment Fee:</strong> $4,000 (due at enrollment)</li>
+                  <li><strong>Flexible Payment:</strong> 4 easy installments</li>
                   <li>
-                    Includes: 18 interview opportunities, unlimited proxy interviews, intensive coaching,
-                    real-time sessions, LinkedIn optimization, and AI-powered visibility.
+                    <strong>Includes:</strong> 18 interview opportunities, unlimited proxy interviews,
+                    intensive coaching, real-time sessions, LinkedIn optimization, and
+                    AI-powered visibility.
+                  </li>
+                  <li>
+                    <strong>Career Success Contribution:</strong> Due upon completion of successful
+                    placement support and transition guidance.
                   </li>
                 </ul>
               </div>
@@ -131,38 +142,52 @@ const TermsAndConditionsPage = () => {
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400">Premium Plan</h3>
                 <ul className="list-disc list-inside space-y-2">
-                  <li>Enrollment Fee: $5,000 (due at enrollment)</li>
-                  <li>Placement Fee: 10% of gross salary</li>
-                  <li>Flexible Payment: 4 easy installments</li>
+                  <li><strong>Enrollment Fee:</strong> $5,000 (due at enrollment)</li>
+                  <li><strong>Flexible Payment:</strong> 4 easy installments</li>
                   <li>
-                    Includes: 22 interviews, unlimited proxy support, lifetime resume updates, 24/7 portal
-                    access, direct hiring manager introductions, and VIP coaching.
+                    <strong>Includes:</strong> 22 interviews, unlimited proxy support, lifetime resume
+                    updates, 24/7 portal access, direct hiring manager introductions, and
+                    VIP coaching.
                   </li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold text-cyan-400">General Payment Conditions</h3>
-                <ul className="list-disc list-inside space-y-2">
-                  <li>All enrollment fees are non-refundable once services are initiated.</li>
-                  <li>Payments must be made on time; delays may result in suspension or termination.</li>
                   <li>
-                    Failure to pay may authorize Novotion to collect via ACH, Stripe, or wage garnishment
-                    agreements.
+                    <strong>Career Success Contribution:</strong> Reflects lifetime access, employer
+                    introductions, and ongoing advisory services following successful
+                    career placement.
                   </li>
-                  <li>Disputes over payments will follow the Dispute Resolution clause.</li>
                 </ul>
               </div>
             </div>
+          </section>
+
+          {/* SECTION 2 */}
+          <section>
+            <h2 className="text-xl font-semibold text-blue-400 mb-3">2. Payments & Financial Terms</h2>
+            <ul className="list-disc list-inside space-y-2">
+              <li>All enrollment fees are non-refundable once services are initiated.</li>
+              <li>
+                Career Success Contributions are assessed only after a verified job
+                offer or equivalent placement milestone, and reflect continued access
+                to post-placement resources.
+              </li>
+              <li>Payments must be made according to the agreed schedule; delays may
+                result in suspension or termination of services.</li>
+              <li>Failure to pay may authorize Novotion to collect via ACH, Stripe, or
+                other approved payment mechanisms.</li>
+              <li>Disputes regarding payments shall follow the Dispute Resolution
+                clause.</li>
+            </ul>
           </section>
 
           {/* SECTION 3 */}
           <section>
             <h2 className="text-xl font-semibold text-blue-400 mb-3">3. Client Responsibilities</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li>Clients must follow the training program and show reasonable effort.</li>
-              <li>Defaulting on payments results in loss of access; re-entry requires re-enrollment.</li>
-              <li>Clients agree to indemnify Novotion against any claims from their actions.</li>
+              <li>Clients must actively participate in all training, coaching, and
+                interview processes.</li>
+              <li>Defaulting on payments results in loss of access to services; re-entry
+                may require new enrollment.</li>
+              <li>Clients agree to indemnify Novotion against claims arising from their
+                actions or omissions.</li>
             </ul>
           </section>
 
@@ -170,8 +195,10 @@ const TermsAndConditionsPage = () => {
           <section>
             <h2 className="text-xl font-semibold text-blue-400 mb-3">4. Warranties & Liability</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li>Novotion makes no warranties regarding job placement or employment outcomes.</li>
-              <li>Employment decisions are solely at the discretion of hiring companies.</li>
+              <li>Novotion provides training and placement support but makes no
+                guarantee of employment outcomes.</li>
+              <li>Hiring decisions are solely at the discretion of employers or
+                third-party organizations.</li>
             </ul>
           </section>
 
@@ -179,8 +206,9 @@ const TermsAndConditionsPage = () => {
           <section>
             <h2 className="text-xl font-semibold text-blue-400 mb-3">5. Dispute Resolution</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li>Disputes shall first be resolved through friendly negotiation.</li>
-              <li>If unresolved, disputes proceed to mediation and binding arbitration in Delaware.</li>
+              <li>All disputes shall first be addressed through good-faith negotiation.</li>
+              <li>If unresolved, disputes shall proceed to mediation and binding
+                arbitration in the State of Delaware.</li>
             </ul>
           </section>
 
@@ -188,14 +216,14 @@ const TermsAndConditionsPage = () => {
           <section>
             <h2 className="text-xl font-semibold text-blue-400 mb-3">6. Legal & Miscellaneous</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li>Governing law: State of Delaware.</li>
+              <li><strong>Governing Law:</strong> State of Delaware.</li>
               <li>Novotion acts as an independent contractor, not an employer.</li>
-              <li>Force Majeure applies to events beyond control (disasters, pandemics, strikes, etc.).</li>
-              <li>If any clause is invalid, the rest remains enforceable.</li>
+              <li><strong>Force Majeure:</strong> Novotion is not liable for delays caused by events
+                beyond its control (e.g., disasters, pandemics, strikes).</li>
+              <li>If any clause is deemed invalid, the remainder of the agreement
+                remains enforceable.</li>
             </ul>
           </section>
-
-          
         </motion.div>
       </motion.div>
     </div>
