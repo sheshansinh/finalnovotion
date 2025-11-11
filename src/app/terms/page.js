@@ -1,20 +1,22 @@
 // src\app\terms\page.js
+//sheshan
+//
 "use client";
-
+ 
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import NovotionNavbar from "@/components/Navbar";
 import NovotionFooter from "@/components/Footer";
-
+ 
 const TermsAndConditionsPage = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
-
+ 
   useEffect(() => {
     if (inView) controls.start("visible");
   }, [inView, controls]);
-
+ 
   const textVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -23,24 +25,24 @@ const TermsAndConditionsPage = () => {
       transition: { type: "spring", stiffness: 80, damping: 15, staggerChildren: 0.1 },
     },
   };
-
+ 
   const itemVariants = {
     hidden: { opacity: 0, y: 10 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
   };
-
+ 
   return (
-
+ 
     <div>
     <div className="relative w-full bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-gray-100 overflow-hidden py-20 flex items-center justify-center min-h-screen">
       <NovotionNavbar />
-
+ 
       {/* Soft animated background glow */}
       <div className="absolute inset-0 z-0 opacity-20">
         <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-blue-700 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-cyan-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
-
+ 
       {/* Main content */}
       <motion.div
         ref={ref}
@@ -55,12 +57,12 @@ const TermsAndConditionsPage = () => {
         >
           Terms & Conditions
         </motion.h1>
-
+ 
         <motion.div
           variants={itemVariants}
           className="h-1 w-24 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full mx-auto mb-10"
         ></motion.div>
-
+ 
         <motion.div
           variants={itemVariants}
           className="text-gray-300 text-base sm:text-lg leading-relaxed space-y-10"
@@ -85,7 +87,7 @@ const TermsAndConditionsPage = () => {
               reflects the value of services rendered throughout and after successful
               hiring outcomes.
             </p>
-
+ 
             <div className="space-y-6">
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400">Basic Plan</h3>
@@ -104,7 +106,7 @@ const TermsAndConditionsPage = () => {
                   </li>
                 </ul>
               </div>
-
+ 
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400">Standard Plan</h3>
                 <ul className="list-disc list-inside space-y-2">
@@ -121,7 +123,7 @@ const TermsAndConditionsPage = () => {
                   </li>
                 </ul>
               </div>
-
+ 
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400">Advanced Plan</h3>
                 <ul className="list-disc list-inside space-y-2">
@@ -138,7 +140,7 @@ const TermsAndConditionsPage = () => {
                   </li>
                 </ul>
               </div>
-
+ 
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400">Premium Plan</h3>
                 <ul className="list-disc list-inside space-y-2">
@@ -158,7 +160,7 @@ const TermsAndConditionsPage = () => {
               </div>
             </div>
           </section>
-
+ 
           {/* SECTION 2 */}
           <section>
             <h2 className="text-xl font-semibold text-blue-400 mb-3">2. Payments & Financial Terms</h2>
@@ -177,7 +179,7 @@ const TermsAndConditionsPage = () => {
                 clause.</li>
             </ul>
           </section>
-
+ 
           {/* SECTION 3 */}
           <section>
             <h2 className="text-xl font-semibold text-blue-400 mb-3">3. Client Responsibilities</h2>
@@ -190,7 +192,7 @@ const TermsAndConditionsPage = () => {
                 actions or omissions.</li>
             </ul>
           </section>
-
+ 
           {/* SECTION 4 */}
           <section>
             <h2 className="text-xl font-semibold text-blue-400 mb-3">4. Warranties & Liability</h2>
@@ -201,7 +203,7 @@ const TermsAndConditionsPage = () => {
                 third-party organizations.</li>
             </ul>
           </section>
-
+ 
           {/* SECTION 5 */}
           <section>
             <h2 className="text-xl font-semibold text-blue-400 mb-3">5. Dispute Resolution</h2>
@@ -211,7 +213,7 @@ const TermsAndConditionsPage = () => {
                 arbitration in the State of Delaware.</li>
             </ul>
           </section>
-
+ 
           {/* SECTION 6 */}
           <section>
             <h2 className="text-xl font-semibold text-blue-400 mb-3">6. Legal & Miscellaneous</h2>
@@ -227,11 +229,12 @@ const TermsAndConditionsPage = () => {
         </motion.div>
       </motion.div>
     </div>
-
+ 
     <NovotionFooter />
-    
+   
     </div>
   );
 };
-
+ 
 export default TermsAndConditionsPage;
+ 
