@@ -66,14 +66,14 @@ const TestimonialSlider = () => {
       date: "4 months ago",
       thumbImage: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     },
-    {
-      name: "Pravallika Yarragudi",
-      role: "Sr. DFT Verification Engineer, Lightmatter",
-      testimonial: "Novotion's tailored approach made all the difference. They understood my niche technical field. Their resume and LinkedIn optimization immediately helped me land more interviews. I'm now at Lightmatter in a role that is a perfect fit for my career goals.",
-      rating: 5,
-      date: "5 months ago",
-      thumbImage: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-    },
+    // {
+    //   name: "Pravallika Yarragudi",
+    //   role: "Sr. DFT Verification Engineer, Lightmatter",
+    //   testimonial: "Novotion's tailored approach made all the difference. They understood my niche technical field. Their resume and LinkedIn optimization immediately helped me land more interviews. I'm now at Lightmatter in a role that is a perfect fit for my career goals.",
+    //   rating: 5,
+    //   date: "5 months ago",
+    //   thumbImage: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+    // },
     {
       name: "Naveen Kumar Mandadi",
       role: "SOC Analyst, Fivesky",

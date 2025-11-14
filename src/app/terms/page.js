@@ -205,17 +205,17 @@ const TermsAndConditionsPage = () => {
           </section>
  
           {/* SECTION 5 */}
-          <section>
+          {/* <section>
             <h2 className="text-xl font-semibold text-blue-400 mb-3">5. Dispute Resolution</h2>
             <ul className="list-disc list-inside space-y-2">
               <li>All disputes shall first be addressed through good-faith negotiation.</li>
               <li>If unresolved, disputes shall proceed to mediation and binding
                 arbitration in the State of Delaware.</li>
             </ul>
-          </section>
+          </section> */}
  
           {/* SECTION 6 */}
-          <section>
+          {/* <section>
             <h2 className="text-xl font-semibold text-blue-400 mb-3">6. Legal & Miscellaneous</h2>
             <ul className="list-disc list-inside space-y-2">
               <li><strong>Governing Law:</strong> State of Delaware.</li>
@@ -226,7 +226,26 @@ const TermsAndConditionsPage = () => {
                 remains enforceable.</li>
               <li>Hello</li>
             </ul>
-          </section>
+          </section> */}
+          {/* SECTION 5 */}
+        <section>
+        <h2 className="text-xl font-semibold text-blue-400 mb-3">5. Dispute Resolution</h2>
+        <ul className="list-disc list-inside space-y-2">
+          <li>All disputes shall first be addressed through good-faith negotiation.</li>
+          <li>If unresolved, disputes shall proceed to mediation and binding arbitration in the State of Delaware.</li>
+        </ul>
+        </section>
+
+        {/* SECTION 6 */}
+        <section>
+        <h2 className="text-xl font-semibold text-blue-400 mb-3">6. Legal & Miscellaneous</h2>
+        <ul className="list-disc list-inside space-y-2">
+          <li><strong>Governing Law:</strong> State of Delaware.</li>
+          <li>Novotion acts as an independent contractor, not an employer.</li>
+          <li><strong>Force Majeure:</strong> Novotion is not liable for delays caused by events beyond its control (e.g., disasters, pandemics, strikes).</li>
+          <li>If any clause is deemed invalid, the remainder of the agreement remains enforceable.</li>
+        </ul>
+        </section>
         </motion.div>
       </motion.div>
     </div>
