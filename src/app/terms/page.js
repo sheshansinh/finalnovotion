@@ -224,6 +224,7 @@ const TermsAndConditionsPage = () => {
                 beyond its control (e.g., disasters, pandemics, strikes).</li>
               <li>If any clause is deemed invalid, the remainder of the agreement
                 remains enforceable.</li>
+              <li>Hello</li>
             </ul>
           </section>
         </motion.div>
