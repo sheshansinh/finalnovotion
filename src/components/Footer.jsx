@@ -265,7 +265,7 @@ const NovotionFooter = () => {
             
             {/* Copyright */}
             <p className="text-sm text-gray-500 order-3 md:order-1 mt-4 md:mt-0">
-              &copy; 2025 Novotion Inc. All rights reserved.
+              &copy; 2025 Novotion Services LLP. All rights reserved.
             </p>
 
             {/* Social Links */}
