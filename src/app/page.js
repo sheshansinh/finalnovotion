@@ -146,7 +146,7 @@ const Home = () => {
                   <div className="grid grid-cols-3 gap-4 pt-4">
                     {[
                       { number: "500+", label: "Clients" },
-                      { number: "10K+", label: "Placements" },
+                      { number: "7K+", label: "Placements" },
                       { number: "2", label: "Countries" },
                     ].map((stat, index) => (
                       <div key={index} className="text-center">

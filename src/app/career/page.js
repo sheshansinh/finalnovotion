@@ -374,7 +374,7 @@ const Career = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 text-lg">Global Collaboration</h4>
-                      <p className="text-gray-600">Collaborate with recruitment colleagues across the UK, USA, and India, learning from diverse perspectives in talent acquisition and career support.</p>
+                      <p className="text-gray-600">Collaborate with recruitment colleagues across the USA, UK, and India, learning from diverse perspectives in talent acquisition and career support.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">

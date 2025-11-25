@@ -52,7 +52,7 @@ const Footer = () => {
             </Link>
 
             <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-md mx-auto md:mx-0">
-              Empowering businesses across UK & USA markets with strategic recruitment solutions and IT career support services since 2021.
+              Empowering businesses across USA & UK markets with strategic recruitment solutions and IT career support services since 2021.
             </p>
 
             <div className="flex space-x-4 justify-center md:justify-start">
@@ -180,8 +180,8 @@ const Footer = () => {
               <li className="flex items-start gap-3 justify-center md:justify-start">
                 <MapPin className="h-5 w-5 text-primary mt-0.5" />
                 <div className="text-gray-400 text-sm">
-                  <div className="font-medium mb-1">USA Office:</div>
-                  <div>7345 W, Sand Lake RD, STE 210</div>
+                  <div className="font-medium mb-1">USA:</div>
+                  <div>7345 W, Sand Lake Rd, Ste 210</div>
                   <div>Orlando, FL 32819</div>
                 </div>
               </li>
@@ -189,7 +189,7 @@ const Footer = () => {
               <li className="flex items-start gap-3 justify-center md:justify-start">
                 <MapPin className="h-5 w-5 text-primary mt-0.5" />
                 <div className="text-gray-400 text-sm">
-                  <div className="font-medium mb-1">India Office:</div>
+                  <div className="font-medium mb-1">India:</div>
                   <div>Fourth floor, Streebo house</div>
                   <div>Nr DAV school, off S.G. highway</div>
                   <div>DAV International school, Makarba</div>

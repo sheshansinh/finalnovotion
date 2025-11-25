@@ -474,7 +474,7 @@ const TrustedBySection = () => {
         {/* Additional Trust Info */}
         <div className="bg-white rounded-xl p-6 shadow border border-gray-200 max-w-2xl mx-auto">
           <p className="text-gray-700 font-semibold text-sm md:text-base">
-            And <span className="text-primary">500+ organizations</span> across UK and USA trust our recruitment expertise.
+            And <span className="text-primary">500+ organizations</span> across USA and UK trust our recruitment expertise.
           </p>
         </div>
 
