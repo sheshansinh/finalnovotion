@@ -330,7 +330,7 @@ const HeroSection = () => {
       </div>
 
       {/* Slide Indicators - Mobile Optimized */}
-      <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 sm:gap-3 z-20">
+      {/* <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 sm:gap-3 z-20">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -341,7 +341,7 @@ const HeroSection = () => {
                 'w-2 sm:w-3 h-2 sm:h-3 bg-gray-300'}`}
           />
         ))}
-      </div>
+      </div> */}
 
       {/* Prev / Next Buttons - Hidden on Mobile */}
       <div className="hidden md:flex absolute top-1/2 left-0 right-0 transform -translate-y-1/2 justify-between px-4 lg:px-6 z-20 pointer-events-none">
