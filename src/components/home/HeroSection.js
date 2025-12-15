@@ -234,7 +234,7 @@ const HeroSection = () => {
 
                {/* Add this new button for paid services */}
               <Link href="/services/career-packages" className="w-full sm:w-auto">
-                <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium flex items-center gap-2 hover:scale-105 transition-transform w-full sm:w-auto text-sm sm:text-base">
+                <Button className="bg-primary hover:bg-primary-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium flex items-center gap-2 hover:scale-105 transition-transform w-full sm:w-auto text-sm sm:text-base">
                   <Star className="w-3 h-3 sm:w-4 sm:h-4" />
                   Premium Services
                 </Button>
