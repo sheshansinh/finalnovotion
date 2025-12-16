@@ -299,7 +299,7 @@ const CareerPackages = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="#packages">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3">
+                <Button size="lg" className="group bg-gradient-to-r from-cyan-400 to-blue-600 hover:from-cyan-500 hover:to-blue-700 text-white px-6 sm:px-8 py-4 sm:py-4 rounded-lg shadow-lg hover:shadow-xl transition-all w-full sm:w-auto text-base sm:text-base font-semibold">
                   View Packages
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -568,7 +568,7 @@ const CareerPackages = () => {
                     <div className="text-xs text-gray-500 text-center">
                       <div className="flex items-center justify-center gap-2">
                         <Shield className="h-3 w-3" />
-                        Secure payment • 30-day money-back guarantee
+                        Secure payment 
                       </div>
                     </div>
                   </div>

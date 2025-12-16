@@ -342,7 +342,7 @@ const ProServices = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="#services">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3">
+                <Button size="lg" className="group bg-gradient-to-r from-cyan-400 to-blue-600 hover:from-cyan-500 hover:to-blue-700 text-white px-6 sm:px-8 py-4 sm:py-4 rounded-lg shadow-lg hover:shadow-xl transition-all w-full sm:w-auto text-base sm:text-base font-semibold">
                   Browse Services
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -536,7 +536,7 @@ const ProServices = () => {
                       <div className="text-center mt-4 text-sm text-gray-500">
                         <div className="flex items-center justify-center gap-2">
                           <Shield className="h-3 w-3" />
-                          Secure payment • 30-day money-back guarantee
+                          Secure payment 
                         </div>
                       </div>
                     </div>

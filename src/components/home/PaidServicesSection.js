@@ -740,8 +740,9 @@ const PaidServicesSection = () => {
 
                   <Link href="/services/career-packages#career-plans">
                     <Button 
-                      variant={plan.popular ? 'default' : 'outline'} 
-                      className={`w-full ${plan.popular ? 'bg-primary hover:bg-primary-700' : 'border-primary text-primary hover:bg-primary/10'}`}
+                      // variant={plan.popular ? 'default' : 'outline'} 
+                      variant={'outline'} 
+                      className={`w-full border-primary text-primary hover:bg-primary/10}`}
                     >
                       Learn More
                     </Button>
@@ -786,9 +787,9 @@ const PaidServicesSection = () => {
                     
                     <Link href="/services/pro-services">
                       <Button 
-                        variant="ghost" 
+                        variant="outline" 
                         size="sm" 
-                        className="w-full text-primary hover:text-primary-700 hover:bg-primary/10"
+                        className="w-full border-primary text-primary hover:bg-primary hover:text-white"
                       >
                         Add Service
                       </Button>
@@ -801,7 +802,7 @@ const PaidServicesSection = () => {
 
           {/* Benefits & Guarantees */}
           <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-6 md:p-8 text-gray">
-            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+            {/* <div className="grid md:grid-cols-3 gap-6 md:gap-8">
               <div className="text-center md:text-left">
                 <div className="h-12 w-12 bg-gray/20 rounded-lg flex items-center justify-center mb-4 mx-auto md:mx-0">
                   <Shield className="h-6 w-6" />
@@ -824,6 +825,32 @@ const PaidServicesSection = () => {
                 </div>
                 <h4 className="text-xl text-gray-900 font-bold mb-2">Flexible Payment Options</h4>
                 <p className="text-gray/80 text-sm">Choose from one-time payments or installment plans to fit your budget.</p>
+              </div>
+            </div> */}
+
+            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+              <div className="text-center md:text-left">
+                <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto md:mx-0">
+                  <Award className="h-6 w-6 text-primary" /> {/* Changed icon */}
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Certified Career Experts</h4>
+                <p className="text-gray-600 text-sm">Our team includes certified career coaches and industry specialists with proven track records.</p>
+              </div>
+
+              <div className="text-center md:text-left">
+                <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto md:mx-0">
+                  <Target className="h-6 w-6 text-primary" />
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">85% Placement Success Rate</h4>
+                <p className="text-gray-600 text-sm">Our proven methodology delivers results for professionals across industries.</p>
+              </div>
+
+              <div className="text-center md:text-left">
+                <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto md:mx-0">
+                  <CreditCard className="h-6 w-6 text-primary" />
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Flexible Payment Options</h4>
+                <p className="text-gray-600 text-sm">Choose from one-time payments or installment plans to fit your budget.</p>
               </div>
             </div>
 
